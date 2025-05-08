@@ -1,6 +1,11 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Boton from './components/Boton.vue'
+
+const handleClick = () => {
+  alert('Click en el boton desde el padre')
+}
+
 </script>
 
 <template>
@@ -8,12 +13,14 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld />
+      <HelloWorld msg="Hola HAB" />
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <Boton text="Boton Principal" :onClick="handleClick" className="primary" title="Boton Principal para acceder a la pagina" />
+    <Boton text="Boton Error" :onClick="handleClick" className="error" />
+    <Boton text="Boton Error" :onClick="handleClick" className="asdasd" />
   </main>
 </template>
 
