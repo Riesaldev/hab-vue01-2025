@@ -7,13 +7,18 @@ import onMounted from './components/onMounted.vue'
 import onBeforeUpdate from './components/onBeforeUpdate.vue'
 import onUpdated from './components/onUpdated.vue'
 import onBeforeUnmount from './components/onBeforeUnmount.vue'
+import onUnmounted from './components/onUnmounted.vue'
 
-const showComponent = ref(true)
+const showOnBeforeUnmount = ref(true)
+const showOnUnmounted = ref(true)
 
-const handleMostrarComponente = () => {
-  showComponent.value = !showComponent.value
+const handleShowOnBeforeUnmount = () => {
+  showOnBeforeUnmount.value = !showOnBeforeUnmount.value
 }
 
+const handleShowOnUnmounted = () => {
+  showOnUnmounted.value = !showOnUnmounted.value
+}
 
 const handleClick = () => {
   alert('Click en el boton desde el padre')
@@ -38,8 +43,12 @@ const handleClick = () => {
     <onMounted />
     <onBeforeUpdate />
     <onUpdated />
-    <Boton text="Mostrar componente" :onClick="handleMostrarComponente"/>
-    <onBeforeUnmount v-if="showComponent" />
+    
+    <Boton text="Mostrar/Ocultar componente" :onClick="handleShowOnBeforeUnmount"/>
+    <onBeforeUnmount v-if="showOnBeforeUnmount" />
+
+    <Boton text="Mostrar/Ocultar componente" :onClick="handleShowOnUnmounted"/>
+    <onUnmounted v-if="showOnUnmounted" />
   </main>
 </template>
 
