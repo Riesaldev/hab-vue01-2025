@@ -4,7 +4,7 @@ import Boton from './components/Boton.vue'
 import onBeforeMount from './components/onBeforeMount.vue'
 import onMounted from './components/onMounted.vue'
 import onBeforeUpdate from './components/onBeforeUpdate.vue'
-
+import onUpdated from './components/onUpdated.vue'
 const handleClick = () => {
   alert('Click en el boton desde el padre')
 }
@@ -27,6 +27,7 @@ const handleClick = () => {
     <onBeforeMount />
     <onMounted />
     <onBeforeUpdate />
+    <onUpdated />
   </main>
 </template>
 
