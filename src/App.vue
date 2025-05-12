@@ -1,10 +1,20 @@
 <script setup>
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 import Boton from './components/Boton.vue'
 import onBeforeMount from './components/onBeforeMount.vue'
 import onMounted from './components/onMounted.vue'
 import onBeforeUpdate from './components/onBeforeUpdate.vue'
 import onUpdated from './components/onUpdated.vue'
+import onBeforeUnmount from './components/onBeforeUnmount.vue'
+
+const showComponent = ref(true)
+
+const handleMostrarComponente = () => {
+  showComponent.value = !showComponent.value
+}
+
+
 const handleClick = () => {
   alert('Click en el boton desde el padre')
 }
@@ -28,6 +38,8 @@ const handleClick = () => {
     <onMounted />
     <onBeforeUpdate />
     <onUpdated />
+    <Boton text="Mostrar componente" :onClick="handleMostrarComponente"/>
+    <onBeforeUnmount v-if="showComponent" />
   </main>
 </template>
 
