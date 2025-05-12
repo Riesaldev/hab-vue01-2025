@@ -8,6 +8,11 @@ import onBeforeUpdate from './components/onBeforeUpdate.vue'
 import onUpdated from './components/onUpdated.vue'
 import onBeforeUnmount from './components/onBeforeUnmount.vue'
 import onUnmounted from './components/onUnmounted.vue'
+import vText from './components/v-text.vue'
+import vHtml from './components/v-html.vue'
+import vShow from './components/v-show.vue'
+import vFor from './components/v-for.vue'
+
 
 const showOnBeforeUnmount = ref(true)
 const showOnUnmounted = ref(true)
@@ -28,11 +33,10 @@ const handleClick = () => {
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Hola HAB" />
-    </div>
+    <vText />
+    <vHtml />
+    <vShow />
+    <vFor />
   </header>
 
   <main>
@@ -64,7 +68,7 @@ header {
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
+    display: block;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
