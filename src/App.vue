@@ -1,6 +1,9 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import Boton from './components/Boton.vue'
+import onBeforeMount from './components/onBeforeMount.vue'
+import onMounted from './components/onMounted.vue'
+import onBeforeUpdate from './components/onBeforeUpdate.vue'
 
 const handleClick = () => {
   alert('Click en el boton desde el padre')
@@ -21,6 +24,9 @@ const handleClick = () => {
     <Boton text="Boton Principal" :onClick="handleClick" className="primary" title="Boton Principal para acceder a la pagina" />
     <Boton text="Boton Error" :onClick="handleClick" className="error" />
     <Boton text="Boton Error" :onClick="handleClick" className="asdasd" />
+    <onBeforeMount />
+    <onMounted />
+    <onBeforeUpdate />
   </main>
 </template>
 
