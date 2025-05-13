@@ -12,7 +12,8 @@ import vText from './components/v-text.vue'
 import vHtml from './components/v-html.vue'
 import vShow from './components/v-show.vue'
 import vFor from './components/v-for.vue'
-
+import vIf from './components/v-if.vue'
+import vOn from './components/v-on.vue'
 
 const showOnBeforeUnmount = ref(true)
 const showOnUnmounted = ref(true)
@@ -37,6 +38,8 @@ const handleClick = () => {
     <vHtml />
     <vShow />
     <vFor />
+    <vIf />
+    <vOn />
   </header>
 
   <main>
