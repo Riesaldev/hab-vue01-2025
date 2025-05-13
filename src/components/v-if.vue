@@ -3,6 +3,8 @@ import { ref } from 'vue';
 
 const calificacion = ref(0);
 const alt = ref('Input para calificar');
+
+
 </script>
 
 <template>
@@ -14,6 +16,7 @@ const alt = ref('Input para calificar');
         <p v-else-if="calificacion >= 5" class="aprobado">Aprobado</p>
         <p v-else-if="calificacion >= 3" class="desaprobado">Desaprobado</p>
         <p v-else class="reprobado">Reprobado</p>
+
         
     </div>
 </template>

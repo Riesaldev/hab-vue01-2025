@@ -14,6 +14,9 @@ import vShow from './components/v-show.vue'
 import vFor from './components/v-for.vue'
 import vIf from './components/v-if.vue'
 import vOn from './components/v-on.vue'
+import computed from './components/computed.vue'
+import watch from './components/watch.vue'
+import reactive from './components/reactive.vue'
 
 const showOnBeforeUnmount = ref(true)
 const showOnUnmounted = ref(true)
@@ -40,6 +43,9 @@ const handleClick = () => {
     <vFor />
     <vIf />
     <vOn />
+    <computed />
+    <watch /> 
+    <reactive />
   </header>
 
   <main>
